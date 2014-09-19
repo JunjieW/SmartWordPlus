@@ -31,6 +31,7 @@ function importWords() {
     tellBackgroundToAddWord(wordArray[i]);
         
   }
+  alert('成功添加： ' + wordArray.length + '个单词');
   
   
 }
