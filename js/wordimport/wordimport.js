@@ -24,7 +24,11 @@ function importWords() {
   alert('wordArray = ' + wordArray);
   alert('wordArray.length()= '+ wordArray.length);*/
   for(var i = 0; i < wordArray.length; i++){
-    alert(wordArray[i]);
+    //alert(wordArray[i]);
+    //addWord(wordArray[i]);
+    //addAll(wordArray[i]);
+    //refreshIcon();
+    tellBackgroundToAddWord(wordArray[i]);
         
   }
   
