@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" style="min-width:800px;">
+<head>
+   <meta charset="utf-8" />
+   <title> 单词圣手生词本</title>
+   <script type="text/javascript" src="../../js/jquery/jquery.min.js"></script>
+   <script language="javascript" type="text/jscript" src="../../js/datautil.js"></script>
+   <script language="javascript" type="text/jscript" src="../../js/popupbase.js"></script>
+   <script type="text/javascript" src="../../js/wordimport/wordimport.js"></script>
+   
+   <style type="text/css"> 
+    h1 { 
+      margin:0; 
+      padding:10px 0; 
+      font-size:14px; 
+    }  
+  
+    .mod-retweet { 
+      background:#E4EFF4; 
+      border:1px solid #A8D1E0; 
+      padding:3px 5px 5px; 
+      margin-top:5px; 
+      float: left;
+      
+      padding: 0;
+      margin: 0; 
+      border:1px solid #64B2D1;
+      font-size:12px; 
+      height:580px; 
+      line-height:1.5em; 
+      width:49%; 
+      display:block 
+    }  
+    
+    .mod-retweet .mod-retweet-textarea { 
+      background-color: #FFFFFF; 
+      border:1px solid #64B2D1; 
+      margin-bottom:5px; 
+      overflow:hidden; 
+      padding:2px; 
+      position:relative; 
+      zoom:1 
+    }  
+    
+    .mod-retweet-textarea textarea {
+      padding: 0;
+      margin: 0; 
+      border:0 none; 
+      font-size:12px; 
+      height:580px; 
+      line-height:1.5em; 
+      width:100%; 
+      display:block 
+    }  
+  </style> 
+</head>
+
+<body>
+  <div id="div_words" align="center">
+    <input id="button_import" type="button" value="点击导入">
+  </div>
+  <div class="mod-retweet"> 
+    <h1><a>导入单词</a></h1> 
+    <div class="mod-retweet-textarea"> 
+      <textarea id="ta_words"></textarea> 
+    </div> 
+  </div>
+  
+  <div class="mod-retweet"> 
+    <h1><a>导入意思</a></h1> 
+    <div class="mod-retweet-textarea"> 
+      <textarea id="ta_explanation"></textarea> 
+    </div> 
+  </div>  
+ 
+ 
+</body>
+
+
+</html>
