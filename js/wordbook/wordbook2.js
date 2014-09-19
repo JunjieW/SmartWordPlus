@@ -1,0 +1,2 @@
+InitWordPage();
+TT.initialize();

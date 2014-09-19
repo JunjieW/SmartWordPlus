@@ -1,0 +1,37 @@
+{
+   "background": {
+      "page": "htm/background.htm"
+   },
+   "browser_action": {
+      "all_frames": true,
+      "default_icon": "img/sw_19.png",
+      "default_popup": "htm/popup.htm",
+      "default_title": "单词圣手（Smart Word）"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "css/select.css", "css/jquery.qtip.css" ],
+      "js": [ "js/jquery/jquery.min.js", "js/jquery/jquery.qtip.js", "js/selectionsaverestore.js", "js/colorgen.js", "js/shortcut.js", "js/select.js", "js/searchhi_slim.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": "script-src 'self' https://www.google.com/ https://ajax.googleapis.com/; object-src 'self'",
+   "description": "有效率的中国人看英文网站划词翻译插件。选中一个英语生词后，页面所有该生词均高亮，同时显示其中文释义。提供生词本，统计生词出现的频率，便于识记最需要先记住的生词。\n特色功能：生词高亮和生词频率统计。",
+   "icons": {
+      "128": "img/sw_128.png",
+      "16": "img/sw_16.png",
+      "19": "img/sw_19.png",
+      "32": "img/sw_32.png",
+      "48": "img/sw_48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDMT9YhwjBncPPKPLIbvEYl3VPzVH2jfwNMn+CPa+p/XpA7pL6MY6T+JqAC6ZMVLf7YpovuR4blBnp5HBdN6LIxXN+iEZrDpBKeFmmia+487Fsc8LSawKfb3eCFImY6L3FMfnFmO8m14K3GSTcBr+g2TFhCV6kUiOACd1bKuUEFJwIDAQAB",
+   "manifest_version": 2,
+   "name": "单词圣手（Smart Word）",
+   "omnibox": {
+      "keyword": "sss"
+   },
+   "permissions": [ "*://*/*", "unlimitedStorage", "notifications", "bookmarks", "tabs", "contextMenus" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "0.5938",
+   "web_accessible_resources": [ "img/loading.gif" ]
+}

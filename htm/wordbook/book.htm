@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="keywords" content="单词圣手, 生词本">
+		<meta name="author" content="smart word.">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width = 1000">
+		<meta name="description" content="单词圣手生词本。">
+		<link rel="image_src" href="../../img/wordbook/front-cover.jpg">
+		<title>单词圣手生词本</title>
+		<link type="text/css" href="../../css/wordbook/twentythings.min.css" rel="stylesheet" media="screen" />
+		<link type="text/css" href="../../css/wordbook/print.css" rel="stylesheet" media="print" />
+		<script language="javascript" type="text/jscript" src="../../js/jquery/jquery.min.js"></script>
+		<script language="javascript" type="text/jscript" src="../../js/base.js"></script>
+		<script language="javascript" type="text/jscript" src="../../js/datautil.js"></script>
+		<script type="text/javascript" src="../../js/wordbook/wordbook1.js"></script>
+	</head>
+	<body class="zh-CN book">
+		<header>
+			<h1><a class="logo" >单词圣手生词本</a></h1>
+			<nav>
+				<ul>
+					<li class="table-of-things">
+						<a href="#">目录</a>
+					</li>
+					<li class="divider1"></li>
+					<li class="about">
+						<a href="#">生词本</a>
+					</li>
+					<li class="divider2"></li>
+					<li class="credits">
+						<a href="#">关于</a>
+					</li>
+					<li class="divider2"></li>
+					<li>
+					<div id="social-buttons">
+					<g:plusone size="medium" href="https://chrome.google.com/webstore/detail/odhiddefamddbjhpaoagfkmgkkfhjnkd"></g:plusone>
+					<script type="text/javascript">
+					window.___gcfg = {
+						lang: 'zh-CN'
+					};
+
+				(function() {
+					var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+					po.src = 'https://apis.google.com/js/plusone.js';
+					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+				})();
+    </script>
+				</div>
+				</li>
+				</ul>
+			</nav>
+			<!-- Input type="search" is currently too inconsistent across browsers and platforms -->
+			<input id="search-field" type="text" value="在本书中搜索">
+		</header>
+		<!-- Holds search results -->
+		<div id="search-dropdown">
+			<div class="fader">
+				<div class="background-top"></div>
+				<div class="background-bottom"></div>
+				<div class="results">
+					<div class="things">
+						<h4><span>在本书中搜索</span></h4>
+						<hr>
+					</div>
+					<div class="keywords">
+						<h4><span>关键字</span></h4>
+						<hr>
+					</div>
+					<div class="empty">
+						找不到结果。
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Left side grey overlay that masks out the book -->
+		<div id="grey-mask"></div>
+		<div id="book">
+			<div id="shadow">
+				<div class="shadow-left"></div>
+				<div class="shadow-right"></div>
+			</div>
+			<div id="spine">
+				<div class="spine-top"></div>
+				<div class="spine-bottom"></div>
+			</div>
+			<div id="front-cover-bookmark" style="display: none; ">
+				<div class="content">
+					<p>
+						本界面引用自开源并允许改编的20 things I learned about browsers, 
+					</p>
+					<p>
+						图形部分因能力所限，本人无法绘制新的图形，因此仍引用原来的。仅限交流学习使用。
+					</p>
+					<a href="" class="open-book">打开生词本</a>
+					<canvas id="flip-intro" width="89" height="69"></canvas>
+				</div>
+			</div>
+			<div id="sharer">
+				<div class="background-top"></div>
+				<div class="background-bottom"></div>
+				<div class="content">
+				</div>
+			</div>
+			<div id="front-cover" style="display: none; ">
+				<img src="../../img/wordbook/front-cover.jpg" width="830" height="520">
+			</div>
+			<div id="back-cover" style="display: none; ">
+				<img src="../../img/wordbook/back-cover.jpg" data-src-flipped="../../img/wordbook/back-cover-flipped.jpg" width="830" height="520">
+			</div>
+			<div id="page-shadow-overlay" style="display: none; "></div>
+			<div id="pages">
+			</div>
+			<div id="left-page">
+				<img src="../../img/wordbook/left-page.jpg" data-src-flipped="../../img/wordbook/left-page-flipped.jpg" width="830" height="520">
+			</div>
+			<div id="right-page" style="display: block; ">
+				<div id="paperstack">
+					<div class="paper s1" style="opacity: 1; "></div>
+					<div class="paper s2" style="opacity: 1; "></div>
+					<div class="paper s3" style="opacity: 1; "></div>
+					<div class="paper s4" style="opacity: 1; "></div>
+					<div class="paper s5" style="opacity: 1; "></div>
+					<div class="paper s6" style="opacity: 1; "></div>
+					<div class="paper s7" style="opacity: 1; "></div>
+					<div class="shadow" style="opacity: 1; margin-left: -2px; "></div>
+				</div>
+				<img src="../../img/wordbook/right-page.jpg" width="830" height="520">
+			</div>
+			<canvas id="pageflip"></canvas>
+		</div>
+		<nav id="chapter-nav">
+		</nav>
+		<div id="overlay">
+			<div class="bookmark">
+				<div class="content">
+					<a class="close" href="#">关闭</a>
+					<h3>继续阅读？</h3>
+					<p>
+						您可以从上次读到的地方继续阅读，也可以从头开始阅读。请选择：
+					</p>
+					<a class="action resume" href="#">继续
+					<br>
+					阅读</a>
+					<a class="action restart" href="#">从头
+					<br>
+					开始</a>
+				</div>
+			</div>
+			<div class="print">
+				<a class="close" href="#">关闭</a>
+			</div>
+		</div>
+		<div id="credits">
+			<div class="header">
+				<h2><span>关于</span></h2>
+				<hr>
+			</div>
+			<div class="people">
+				<p class="special-thanks">
+						本界面引用自开源并允许改编的20 things I learned about browsers, 
+					</p>
+					<p>
+						图形部分因能力所限，本人无法绘制新的图形，因此仍引用原来的。仅限交流学习使用。
+					</p>
+				<p class="html5-logo">
+					Built in HTML5 <img src="../../img/wordbook/HTML5_Badge_32.png" title="Built in HTML5">
+				</p>
+			</div>
+			<hr>
+			<div class="share">
+				<p>
+					分享单词圣手（smart word）。
+				</p>
+				<ul>
+					<li class="facebook">
+						<a href="http://www.facebook.com/sharer.php?u=https://chrome.google.com/webstore/detail/odhiddefamddbjhpaoagfkmgkkfhjnkd" title="Facebook"><span class="icon"></span><span class="text">分享途径</span></a>
+					</li>
+					<li class="twitter">
+						<a href="http://twitter.com/share?original_referer=https://chrome.google.com/webstore/detail/odhiddefamddbjhpaoagfkmgkkfhjnkd&url=https://chrome.google.com/webstore/detail/odhiddefamddbjhpaoagfkmgkkfhjnkd" title="Twitter"><span class="icon"></span><span class="text">分享途径</span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="articleId">
+			foreword
+		</div>
+		<div id="pageNumber">
+			1
+		</div>
+		<div id="pagination-prev" class="">
+			<a href="#">
+			<div class="arrow">
+				LOCALE_PREVIOUS_PAGE
+			</div></a>
+			<div class="page-progress" style="display: none; ">
+				<p class="thing"></p>
+				<p class="number">
+					页 <span></span>
+				</p>
+			</div>
+		</div>
+		<div id="pagination-next" class="">
+			<a href="">
+			<div class="arrow">
+				LOCALE_NEXT_PAGE
+			</div></a>
+			<div class="page-progress" style="display: block; ">
+				<p class="thing">
+					前言
+				</p>
+				<p class="number">
+					页 <span>2/3</span>
+				</p>
+			</div>
+		</div>
+		<div id="table-of-contents"  style="overflow:hidden;">
+		</div>
+		<footer>
+			<div class="right-side">
+				<div class="divider"></div>
+				<div class="sharing">
+					<p>
+						分享
+					</p>
+					<input type="text" class="clipboard-notification" value="https://chrome.google.com/webstore/detail/odhiddefamddbjhpaoagfkmgkkfhjnkd" readonly="readonly">
+					<ul>
+						<li class="facebook">
+							<a href="http://www.facebook.com/sharer.php?u=https://chrome.google.com/webstore/detail/odhiddefamddbjhpaoagfkmgkkfhjnkd" title="Facebook"></a>
+						</li>
+						<li class="twitter">
+							<a href="http://twitter.com/share?original_referer=https://chrome.google.com/webstore/detail/odhiddefamddbjhpaoagfkmgkkfhjnkd&url=https://chrome.google.com/webstore/detail/odhiddefamddbjhpaoagfkmgkkfhjnkd" title="Twitter"></a>
+						</li>
+						<li class="url">
+							<a href="https://chrome.google.com/webstore/detail/odhiddefamddbjhpaoagfkmgkkfhjnkd#"></a>
+						</li>
+					</ul>
+				</div>
+				<div class="divider"></div>
+				<div class="divider"></div>
+				<div class="lights-wrapper">
+					<div class="lights">
+						<a href="#"><span class="icon">背景光</span></a>
+					</div>
+				</div>
+				<div class="divider"></div>
+				<div class="fullscreen-wrapper" style="">
+					<div class="fullscreen">
+						<a href="#"><span class="icon"></span>全屏</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script type="text/javascript" src="../../js/wordbook/twentythings.min.js"></script>
+		<script type="text/javascript" src="../../js/wordbook/wordbook2.js"></script>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" style="min-width:800px;">
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+   <title> 单词圣手生词本</title>
+
+   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=1">
+
+   <!-- CSS -->
+   <link rel="stylesheet" href="../../css/wordcard/main.css?version=1" />
+   <link rel="stylesheet" href="../../css/wordcard/html5sticky.css?version=1" />
+
+   <link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' />
+
+   <!-- JavaScript -->
+   <!--[if IE]><![endif]-->
+   <!--[if lt IE 9]>
+   <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+   <![endif]-->
+    
+   <script type="text/javascript" src="../../js/jquery/jquery.min.js"></script>
+   <script src="../../js/wordcard/respond.min.js"></script>
+   <script src="../../js/wordcard/modernizr.custom.23610.js"></script>
+   <script language="javascript" type="text/jscript" src="../../js/base.js"></script>
+   <script language="javascript" type="text/jscript" src="../../js/datautil.js"></script>
+   <script language="javascript" type="text/jscript" src="../../js/popupbase.js"></script>
+   <script type="text/javascript" src="../../js/jgesture/jgesture-1.0.3.js"></script>
+  <script language="javascript" type="text/jscript" src="../../js/wordcard.js"></script>
+ </head>
+
+<body>
+
+	<!-- First header has an ID so you can give it individual styles, and target stuff inside it -->
+	<header id="head">
+
+      <a href="wordcard.htm">
+         <h1>单词圣手 <br /><small>生词</small></h1>
+      </a>
+
+      <div class="left topsection">
+	  <div>
+         排序:
+                                <input id="cishu" name="rdOrderKey" type="radio" value="count" checked="true">次数
+                                <input id="zimu" name="rdOrderKey" type="radio" value="word">字母
+								&nbsp;&nbsp;&nbsp;&nbsp;
+								<input id="jiangxu" name="rdOrder" type="radio" checked="true" value="desc">降序
+								<input id="shengxu" name="rdOrder" type="radio" value="asc">升序
+	  </div>
+	<div align="right">
+	   <input id="prevpage" type="button" value="上一页"/><input id="nextpage" type="button" value="下一页"/>
+		<span id="itemcount" align="right">
+                                    1/100页</span>
+	  <span id='span_newwords'>，单词：0个</span>
+			
+	  </div>	  
+      </div>
+
+      <div class="left topsection">
+         <a href="#" id="shrink" class="tooltip blue-tooltip"><img src="../../img/wordcard/decrease.png" alt="Shrink"><span>收起</span></a>
+         <a href="#" id="expand" class="tooltip blue-tooltip"><img src="../../img/wordcard/increase.png" alt="Expand"><span>展开</span></a>
+      </div>
+	</header><!-- #head -->
+	
+   <div id="main">
+   </div>
+
+   <div class="clear">&nbsp;</div>
+   <div class="clear">&nbsp;</div>
+</body>
+
+
+</html>

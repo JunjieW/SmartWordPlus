@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>SmartWord 单词本</title>
+    <link rel="stylesheet" type="text/css" href="../css/options.css">
+<script type="text/javascript" src="../js/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../js/jgesture/jgesture-1.0.3.js"></script>
+<script language="javascript" type="text/jscript" src="../js/base.js"></script>
+<script language="javascript" type="text/jscript" src="../js/datautil.js"></script>
+<script language="javascript" type="text/jscript" src="../js/popupbase.js"></script>
+<script language="javascript" type="text/jscript" src="../js/popup.js"></script>
+<script type="text/javascript" src="../js/entry.js"></script>
+</head>
+<body>
+    <div id="main_container">
+        <table width="98%" valign="top">
+            <tr>
+                <td>
+                    <h1>
+                        <img src="../img/sw_48.png" width="30" />单词本</h1>
+						
+                </td>
+				<td align="right">
+                <input id="xuanting" name="ckXuanTingCaptureWord" type="checkbox">悬停取词
+                <input id="quci" name="ckCaptureWord" type="checkbox">双击取词
+                <input id="sanchongmen" type="button" value="三重门"/>  
+                <input id="kapian" type="button" value="卡片"/> 
+                <input id="yun" type="button" value="云"/> 
+                <input id="shu" type="button" value="书"/> 
+                <input id="huandeng" type="button" value="幻灯"/> 
+                <input id="daochu" type="button" value="导出"/> 
+                <a href="http://site.douban.com/211736/widget/notes/13492219/note/392896362/" target="_blanket">捐助</a>
+                <a href="http://site.douban.com/211736/widget/notes/13492219/note/281401743/" target="_blanket">致谢</a>
+                <a href="http://site.douban.com/211736/widget/notes/13492219/note/392909680/" target="_blanket">帮助</a> 
+				</td>
+            </tr>
+            </table>
+        <table cellpadding="5" class="settings-table">
+            <tr>
+                <td valign="top" width="75%">
+                    <table width="100%">
+                        <tr>
+                            <td>
+                                <input id="cishu" name="rdOrderKey" type="radio" value="count" checked="true">次数
+                                <input id="zimu" name="rdOrderKey" type="radio" value="word">字母
+								&nbsp;&nbsp;&nbsp;&nbsp;
+								<input id="jiangxu" name="rdOrder" type="radio" checked="true" value="desc">降序
+								<input id="shengxu" name="rdOrder" type="radio" value="asc">升序
+                            </td>
+							<td>
+								 <input id="dangqianye" name="ckCurrent" type="checkbox">当前页
+							</td>
+                            <td align="right">
+                                <input id="prevpage" type="button" value="上一页"/><input id="nextpage" type="button" value="下一页"/>
+                            </td>
+                            <td align="left">
+                                <span id="itemcount" align="right">
+                                    1/100页</span>
+								<span id='span_newwords'>，单词：0个</span>
+                            </td>
+                        </tr>
+                    </table>
+                    <div id="div_words">
+                    </div>
+                </td>
+            </tr>
+        </table>
+	</div>
+</body>
+</html>

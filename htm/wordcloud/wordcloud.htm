@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset=UTF-8>
+	<title>单词圣手单词云</title>
+	<style type="text/css">
+	canvas {
+	position: fixed; top: 2em; right: 0;
+	font-family: monospace;
+	white-space: nowrap;
+	}
+	.support {
+		color: #080;
+	}
+	.not_support {
+		color: #800;
+	}
+	</style>
+</head>
+<body>
+<ul>
+	<li><input type="button" id="rotateRatio0_function" value="横向" /></li>
+	<li><input type="button" id="rotateRatio_function" value="竖向" /></li>
+	<li><input type="button" id="english" value="随机" /></li>
+	<li><input type="button" id="drawMask" value="drawMask" /></li>
+	<li><input type="button" id="color" value="背景色" /></label></li>
+	<li><input type="button" id="wait" value="缓进" /></li>
+	<li><input type="button" id="weightFactor" value="1/2" /></li>
+	<li><input type="button" id="wordColor_light" value="随机光" /></li>
+	<li><input type="button" id="clearCanvas" value="With Image" /></li>
+	<li><input type="button" id="fillbox" value="fillBox" /></li>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+</ul>
+
+<canvas id="result" width="580" height="400"></canvas>
+
+<script type="text/javascript" src="../../js/jquery/jquery.min.js"></script>
+<script language="javascript" type="text/jscript" src="../../js/datautil.js"></script>
+<script language="javascript" type="text/jscript" src="../../js/popupbase.js"></script>
+<script type="text/javascript" src="../../js/wordcloud/jquery.wordcloud.js"></script>
+<script type="text/javascript" src="../../js/wordcloud/wordcloud.js"></script>
+</body>
+</html>
