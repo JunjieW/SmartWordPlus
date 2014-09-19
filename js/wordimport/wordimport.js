@@ -18,12 +18,12 @@ $(document).ready(function() {
 
 function importWords() {
   string = document.all.ta_words.value;
-  //alert(string);
+  /*alert(string);*/
   wordArray = string.split('\n');
  /* alert('string splited'+ string);
-  alert('wordArray = ' + wordArray);*/
-  //alert('wordArray.length()= '+ wordArray.length);
-  for(var i = 0; i < t.length; i++){
+  alert('wordArray = ' + wordArray);
+  alert('wordArray.length()= '+ wordArray.length);*/
+  for(var i = 0; i < wordArray.length; i++){
     alert(wordArray[i]);
         
   }
